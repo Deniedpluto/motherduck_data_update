@@ -29,4 +29,8 @@ jobs:
 
     # run sql script
       - name: Run SQL script
-        run: ./duckdb > script.sql
+        run: ./duckdb my_database.db < script.sql > output.log
+
+    # validate success
+      - name: Display output.log
+        run: cat output.log
