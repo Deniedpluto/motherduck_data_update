@@ -1,5 +1,5 @@
--- attach to motherduck
-ATTACH 'md:';
+-- attach to motherduck with a token from the gh action environment
+ATTACH 'md:?motherduck_token=${{ secrets.YOUR_SECRET_NAME }}';
 
 -- set the database
 USE my_db;
