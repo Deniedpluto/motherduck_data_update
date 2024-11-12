@@ -27,6 +27,8 @@ jobs:
           unzip duckdb_cli-linux-amd64
           rm duckdb_cli-linux-amd64.zip
 
-    # run sql script
+    # run sql script with a sepcific token
       - name: Run SQL script
+        env:
+          MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
         run: ./duckdb < script.sql
