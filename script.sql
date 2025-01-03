@@ -13,3 +13,7 @@ CREATE TABLE IF NOT EXISTS target (
 -- insert a row
 INSERT INTO target (source, timestamp) 
 VALUES ('github action', CURRENT_TIMESTAMP);
+
+-- refresh espresso data
+CREATE OR REPLACE TABLE PM.Espresso_Data AS
+FROM read_csv('https://docs.google.com/spreadsheets/d/1fD2Tozfvnt6u70lbeQN5FLM1ocHxheAmWKMH6B_oQXs/export?format=csv&gid=1056545167');
