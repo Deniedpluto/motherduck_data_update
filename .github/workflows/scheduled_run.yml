@@ -2,7 +2,7 @@ name: 'Scheduled Run'
 
 on:
   schedule:
-    - cron: '0 10 * * *'  # This line sets the job to run every day at 10am UTC
+    - cron: '0 1 * * *'  # This line sets the job to run every day at 1am UTC/5pm PT
 
 jobs:
   deploy:
